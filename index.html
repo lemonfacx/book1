@@ -15,28 +15,25 @@
       overflow: hidden;
       font-family: sans-serif;
     }
-    .book {
-      display: flex;
-      width: 100vw;
-      height: 90vh;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 10px;
-    }
     .page {
-      flex: 0 0 100%;
-      max-width: 400px;
-      height: 100%;
+      aspect-ratio: 9 / 16; /* 1080x2160 oranı */
+      width: 90vw;          /* ekranın %90’ı kadar genişlik */
+      height: auto;
       background-size: cover;
       background-position: center;
-      background-color: white;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
       border-radius: 16px;
-      position: relative;
-      scroll-snap-align: start;
       margin: 0 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      scroll-snap-align: center;
+      flex: 0 0 auto;
+    }
+    .book {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
     }
     .ar-link {
       position: absolute;
